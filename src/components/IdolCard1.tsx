@@ -11,7 +11,7 @@ const IdolCard1: React.FC = () => {
   const [currentPolaroid, setCurrentPolaroid] = useState(0);
   
   // Debug mode state - can be toggled as needed
-  const [debugMode, setDebugMode] = useState(false);
+  const [debugMode] = useState(false);
   
   // Toast notification state
   const [showToast, setShowToast] = useState(false);
@@ -31,9 +31,9 @@ const IdolCard1: React.FC = () => {
   // Function to navigate between polaroids
   const navigatePolaroid = (direction: 'prev' | 'next') => {
     if (direction === 'prev') {
-      setCurrentPolaroid((prev) => (prev === 0 ? 4 : prev - 1));
+      setCurrentPolaroid((prev) => (prev === 0 ? 5 : prev - 1));
     } else {
-      setCurrentPolaroid((prev) => (prev === 4 ? 0 : prev + 1));
+      setCurrentPolaroid((prev) => (prev === 5 ? 0 : prev + 1));
     }
   };
 
@@ -91,11 +91,11 @@ const IdolCard1: React.FC = () => {
           <div className="absolute bottom-0 left-0 w-40 h-40 bg-black opacity-20 rounded-full blur-2xl -ml-10 -mb-10"></div>
           {/* Heart image at bottom-right corner with subtle rotation */}
           <div className="absolute bottom-0 right-0 -mb-16 -mr-16 z-60 animate-sway">
-            <img src="/heart.webp" alt="Heart" className="w-40 h-auto" />
+            <Image src="/heart.webp" alt="Heart" width={160} height={160} className="w-40 h-auto" />
           </div>
           {/* Spark image at top-left corner with floating animation */}
           <div className="absolute top-0 left-0 -mt-16 -ml-16 z-10 animate-float">
-            <img src="/spark.webp" alt="Spark" className="w-40 h-auto" />
+            <Image src="/spark.webp" alt="Spark" width={160} height={160} className="w-40 h-auto" />
           </div>
           
           {/* Animation keyframes */}
@@ -154,10 +154,10 @@ const IdolCard1: React.FC = () => {
               </p>
               <div className="flex gap-2 sm:gap-3">
                 <Glass className="inline-block px-1.5 sm:px-2 py-0">
-                  <span className="text-white text-xs sm:text-sm">Y2K</span>
+                  <span className="text-white text-xs sm:text-sm">Mask</span>
                 </Glass>
                 <Glass className="inline-block px-1.5 sm:px-2 py-0">
-                  <span className="text-white text-xs sm:text-sm">Kawaii</span>
+                  <span className="text-white text-xs sm:text-sm">Girl</span>
                 </Glass>
               </div>
             </div>
@@ -199,11 +199,11 @@ const IdolCard1: React.FC = () => {
                 
                 {/* Left element */}
                 <div className="flex-shrink-0">
-                  <img 
+                  <Image 
                     src="/pumpfun.svg" 
                     alt="Search" 
-                    width="20" 
-                    height="20" 
+                    width={20} 
+                    height={20} 
                     style={{ filter: 'invert(45%) sepia(85%) saturate(1752%) hue-rotate(308deg) brightness(101%) contrast(101%)' }} 
                     className="w-4 h-4 sm:w-5 sm:h-5 pointer-events-none"
                   />
@@ -243,13 +243,13 @@ const IdolCard1: React.FC = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <button className="p-1 sm:p-2 text-white hover:text-white/80 transition-colors">
-                    <img src="/prev.svg" alt="Previous" width="20" height="20" className="w-5 h-5 sm:w-6 sm:h-6" />
+                    <Image src="/prev.svg" alt="Previous" width={20} height={20} className="w-5 h-5 sm:w-6 sm:h-6" />
                   </button>
                   <button className="p-1 sm:p-2 text-white hover:text-white/80 transition-colors">
-                    <img src="/play.svg" alt="Play" width="28" height="28" className="w-7 h-7 sm:w-8 sm:h-8" />
+                    <Image src="/play.svg" alt="Play" width={28} height={28} className="w-7 h-7 sm:w-8 sm:h-8" />
                   </button>
                   <button className="p-1 sm:p-2 text-white hover:text-white/80 transition-colors">
-                    <img src="/next.svg" alt="Next" width="20" height="20" className="w-5 h-5 sm:w-6 sm:h-6" />
+                    <Image src="/next.svg" alt="Next" width={20} height={20} className="w-5 h-5 sm:w-6 sm:h-6" />
                   </button>
                 </div>
               </Glass>
@@ -292,9 +292,11 @@ const IdolCard1: React.FC = () => {
                 }`}
               >
                 <div className="w-full h-full sm:w-56 md:w-64 sm:h-72 md:h-80 mb-2 sm:mb-4 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="/polaroid1.jpg" 
                     alt="Idol Photo 1" 
+                    width={640}
+                    height={800}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -309,9 +311,11 @@ const IdolCard1: React.FC = () => {
                 }`}
               >
                 <div className="w-full h-full sm:w-56 md:w-64 sm:h-72 md:h-80 mb-2 sm:mb-4 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="/polaroid2.jpg" 
                     alt="Idol Photo 2" 
+                    width={640}
+                    height={800}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -326,9 +330,11 @@ const IdolCard1: React.FC = () => {
                 }`}
               >
                 <div className="w-full h-full sm:w-56 md:w-64 sm:h-72 md:h-80 mb-2 sm:mb-4 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="/polaroid3.jpg" 
                     alt="Idol Photo 3" 
+                    width={640}
+                    height={800}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -343,9 +349,11 @@ const IdolCard1: React.FC = () => {
                 }`}
               >
                 <div className="w-full h-full sm:w-56 md:w-64 sm:h-72 md:h-80 mb-2 sm:mb-4 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="/polaroid4.jpg" 
                     alt="Idol Photo 4" 
+                    width={640}
+                    height={800}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -360,9 +368,30 @@ const IdolCard1: React.FC = () => {
                 }`}
               >
                 <div className="w-full h-full sm:w-56 md:w-64 sm:h-72 md:h-80 mb-2 sm:mb-4 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="/polaroid5.jpg" 
                     alt="Idol Photo 5" 
+                    width={640}
+                    height={800}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Polaroid 6 */}
+              <div 
+                className={`absolute bg-white p-3 sm:p-4 pb-8 sm:pb-12 shadow-lg transform transition-all duration-300 ${
+                  currentPolaroid === 5 
+                    ? 'z-50 rotate-0 scale-100 saturate-100 top-0 left-0' 
+                    : 'z-0 rotate-[20deg] scale-95 opacity-100 saturate-[0.6] top-6 -right-10'
+                }`}
+              >
+                <div className="w-full h-full sm:w-56 md:w-64 sm:h-72 md:h-80 mb-2 sm:mb-4 relative overflow-hidden">
+                  <Image 
+                    src="/polaroid6.jpg" 
+                    alt="Idol Photo 6" 
+                    width={640}
+                    height={800}
                     className="w-full h-full object-cover"
                   />
                 </div>

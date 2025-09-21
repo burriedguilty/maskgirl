@@ -43,13 +43,17 @@ const Navbar = () => {
             {/* Glass buttons */}
             <div className="flex gap-4">
               <Glass className="overflow-hidden">
-                <button className="px-4 py-2 text-white hover:text-pink-100 transition-colors">
-                  Button 1
+                <button 
+                  className="px-4 py-2 text-white hover:text-pink-100 transition-colors flex items-center gap-1.5"
+                  onClick={() => window.open('https://x.com/i/communities/1969086590237753580', '_blank')}
+                >
+                  <Image src="/xcom.svg" alt="X" width={16} height={16} className="w-4 h-4 filter brightness-0 invert opacity-90" />
+                  <span>X Community</span>
                 </button>
               </Glass>
               <Glass className="overflow-hidden">
                 <button className="px-4 py-2 text-white hover:text-pink-100 transition-colors flex items-center justify-center">
-                  <img src="/pumpfun.svg" alt="Pump Fun" width="28" height="28" />
+                  <Image src="/pumpfun.svg" alt="Pump Fun" width={28} height={28} />
                 </button>
               </Glass>
             </div>
