@@ -1,0 +1,10 @@
+This is a placeholder for the favicon.ico file.
+
+Please create a proper favicon.ico file using an image editor or online favicon generator tool and replace this text file with the actual .ico file.
+
+Recommended favicon.ico specifications:
+- Format: ICO
+- Sizes: Include 16x16, 32x32, and 48x48 versions in the same file
+- Color depth: 32-bit (supports transparency)
+
+You can use the logo.png file in the public directory as a base for creating this favicon.
