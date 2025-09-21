@@ -19,7 +19,7 @@ const Navbar = () => {
   }, []);
   
   return (
-    <div className="mx-[3%] mt-[3%]">
+    <div className="mx-[1%] mt-[1%]">
       <AnimatedEntry direction="up" delay={0.1} duration={0.7} distance={50} childrenDelay={0.4} showChildren={showContent}>
         <div className="relative">
           {/* Pink background behind glass */}
